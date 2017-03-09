@@ -182,6 +182,8 @@ return [
          */
         Barryvdh\Debugbar\ServiceProvider::class,
         Aimeos\Shop\ShopServiceProvider::class,
+
+        Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
     ],
 
     /*

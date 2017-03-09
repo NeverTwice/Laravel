@@ -15,16 +15,31 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <li><a href="/">Home</a></li>
+                <li><a href="/list">Catalog</a></li>
+                {{--<li><a href="/admin">Admin</a></li>--}}
+                @if (Auth::id())
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/myaccount">Profil</a></li>
+                @else
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                @endif
             </button>
-            <a class="navbar-brand" href="#">Laravel</a>
+            <a class="navbar-brand" href="/">Laravel</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
+                <li><a href="/list">Catalog</a></li>
+                {{--<li><a href="/admin">Admin</a></li>--}}
+                @if (Auth::id())
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/myaccount">Profil</a></li>
+                @else
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                @endif
             </ul>
             <div class="navbar-right">
                 @yield('aimeos_head')

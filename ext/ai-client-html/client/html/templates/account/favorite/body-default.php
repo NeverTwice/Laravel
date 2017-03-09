@@ -90,7 +90,6 @@ $detailConfig = $this->config( 'client/html/catalog/detail/url/config', array() 
 
 ?>
 <section class="aimeos account-favorite">
-
 	<?php if( ( $errors = $this->get( 'favoriteErrorList', array() ) ) !== array() ) : ?>
 		<ul class="error-list">
 			<?php foreach( $errors as $error ) : ?>
@@ -178,6 +177,7 @@ $detailConfig = $this->config( 'client/html/catalog/detail/url/config', array() 
 				</div>
 			</nav>
 		<?php endif; ?>
-
+    <?php else: ?>
+        No article
 	<?php endif; ?>
 </section>
