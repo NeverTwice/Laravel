@@ -337,10 +337,14 @@ class Standard
 	{
 		if( !isset( $this->cache ) )
 		{
-			$controller = \Aimeos\Controller\Frontend\Factory::createController( $this->getContext(), 'basket' );
-			$view->miniBasket = $controller->get();
+            $controller = \Aimeos\Controller\Frontend\Factory::createController( $this->getContext(), 'basket' );
+            $view->miniBasket = $controller->get();
+            $view->quantity = 0;
+            foreach( $view->miniBasket->getProducts() as $product ) {
+                $view->quantity += $product->getQuantity();
+            }
 
-			$this->cache = $view;
+            $this->cache = $view;
 		}
 
 		return $this->cache;
