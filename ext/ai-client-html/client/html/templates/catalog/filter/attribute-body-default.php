@@ -52,11 +52,11 @@ $params = $this->param();
 
 ?>
 <?php $this->block()->start( 'catalog/filter/attribute' ); ?>
-<section class="catalog-filter-attribute">
+<section class="catalog-filter-attribute col-sm-6">
 
 	<?php if( !empty( $attrMap ) ) : ?>
 
-		<h2><?php echo $enc->html( $this->translate( 'client', 'Attributes' ), $enc::TRUST ); ?></h2>
+		<h2 style="text-align:left; float:left"><?php echo $enc->html( $this->translate( 'client', 'Attributes' ), $enc::TRUST ); ?></h2>
 
 
 		<?php if( !empty( $attrIds ) ) : ?>
@@ -64,7 +64,7 @@ $params = $this->param();
 			<div class="attribute-selected">
 				<span class="selected-intro"><?php echo $enc->html( $this->translate( 'client', 'Your choice' ), $enc::TRUST ); ?></span>
 
-				<ul class="attr-list">
+				<ul style="height:auto" class="attr-list">
 					<?php foreach( $attrMap as $attrType => $attributes ) : ?>
 						<?php foreach( $attributes as $id => $attribute ) : ?>
 							<?php if( ( $key = array_search( $id, $attrIds ) ) !== false ) : ?>

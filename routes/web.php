@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('app');
 });
 
+
 Auth::routes();

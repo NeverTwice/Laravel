@@ -1,0 +1,5 @@
+.catalog-filter-attribute .attribute-lists .attr-list {
+    overflow: auto;
+    padding: 0 0.5em;
+    height: auto;
+}

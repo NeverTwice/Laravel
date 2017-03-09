@@ -627,7 +627,7 @@ html.no-js .catalog-filter-attribute:hover .attribute-lists {
 .catalog-filter-attribute .attribute-lists .attr-list {
 	overflow: auto;
 	padding: 0 0.5em;
-	height: 12em;
+	height: auto;
 }
 
 .catalog-filter-attribute .attribute-lists li.attr-item {

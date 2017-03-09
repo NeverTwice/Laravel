@@ -55,7 +55,7 @@ $enforce = $this->config( 'client/html/catalog/filter/tree/force-search', false 
 
 ?>
 <?php $this->block()->start( 'catalog/filter/tree' ); ?>
-<section class="catalog-filter-tree <?php echo ( $counts == true ? 'catalog-filter-count' : '' ); ?>">
+<section class="col-sm-6 text-right catalog-filter-tree <?php echo ( $counts == true ? 'catalog-filter-count' : '' ); ?>">
 
 	<?php if( $enforce ) : ?>
 		<input type="hidden"
@@ -64,7 +64,7 @@ $enforce = $this->config( 'client/html/catalog/filter/tree/force-search', false 
 		/>
 	<?php endif; ?>
 
-	<h2><?php echo $enc->html( $this->translate( 'client', 'Categories' ), $enc::TRUST ); ?></h2>
+	<h2 style="float:none"><?php echo $enc->html( $this->translate( 'client', 'Categories' ), $enc::TRUST ); ?></h2>
 
 	<?php if( isset( $params['f_catid'] ) ) : unset( $params['f_catid'], $params['f_name'] ); ?>
 		<div class="category-selected">

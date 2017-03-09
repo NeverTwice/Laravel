@@ -9,6 +9,8 @@
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     @yield('aimeos_styles')
+    <link href="own.css" rel="stylesheet">
+
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -25,6 +27,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
+                <li><a href="/list">List</a></li>
+
+                <li><a href="/admin">Admin</a></li>
+                <li><a href="/myaccount">Account</a></li>
             </ul>
             <div class="navbar-right">
                 @yield('aimeos_head')
