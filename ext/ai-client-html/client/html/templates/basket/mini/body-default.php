@@ -7,7 +7,7 @@
  */
 
 $enc = $this->encoder();
-$quantity = 0;
+$quantity = $this->quantity;
 
 
 /** client/html/basket/standard/url/target
