@@ -7,21 +7,21 @@ use App\Product;
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Auth\User;
 
-class Count extends Command
+class ListTable extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'esgi:count:table {table=list}';
+    protected $signature = 'esgi:list:table {table=list}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Count elements of a table';
+    protected $description = 'List name of all element in table';
 
     /**
      * Create a new command instance.
@@ -45,17 +45,19 @@ class Count extends Command
             case 'list' :
                 $this->info("Table available :");
                 $this->info("- Product");
-                $this->info("- Catalog");
                 $this->info("- User");
                 break;
             case 'Product' :
-                $this->info(Product::all()->count());
-                break;
-            case 'Catalog' :
-                $this->info(Catalog::all()->count());
+                $this->info("Product :");
+                foreach (Product::all() as $data){
+                    $this->info("- status : ". $data->status . " | label : " . $data->label);
+                }
                 break;
             case 'User' :
-                $this->info(User::all()->count());
+                $this->info("User :");
+                foreach (User::all() as $data){
+                    $this->info("- email : ". $data->email);
+                }
                 break;
             default :
                 $this->error("Cette table n'existe pas");
