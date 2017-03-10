@@ -14,7 +14,7 @@ class ListTable extends Command
      *
      * @var string
      */
-    protected $signature = 'esgi:list:table {table=list}';
+    protected $signature = 'esgi:list:table {table=list} {--N|number=10}';
 
     /**
      * The console command description.
@@ -40,7 +40,8 @@ class ListTable extends Command
      */
     public function handle()
     {
-        $table = $this->argument('table');
+        $table  = $this->argument('table');
+        $number = $this->option('number');
         switch($table) {
             case 'list' :
                 $this->info("Table available :");
@@ -50,12 +51,18 @@ class ListTable extends Command
             case 'Product' :
                 $this->info("Product :");
                 foreach (Product::all() as $data){
+                    if (--$number < 0) {
+                        break;
+                    }
                     $this->info("- status : ". $data->status . " | label : " . $data->label);
                 }
                 break;
             case 'User' :
                 $this->info("User :");
                 foreach (User::all() as $data){
+                    if (--$number < 0) {
+                        break;
+                    }
                     $this->info("- email : ". $data->email);
                 }
                 break;
