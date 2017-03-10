@@ -23,6 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Product extends Model
 {
+    public $timestamps = false;
     /**
      * The table associated with the model.
      * 

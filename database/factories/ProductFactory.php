@@ -20,6 +20,10 @@ $factory->define(App\Product::class, function (Faker\Generator $faker) {
         'siteid' =>1,
         'code' => $name,
         'label' => $name,
-
+        'config' => '[]',
+        'status' => 0,
+        'mtime' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+        'ctime' => \Carbon\Carbon::now()->format('Y-m-d H:i:s'),
+        'editor' => 'ESGI',
     ];
 });
