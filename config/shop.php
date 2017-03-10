@@ -22,6 +22,7 @@ return array(
 		'checkout-confirm' => array( 'checkout/confirm' ),
 		'checkout-index' => array( 'checkout/standard' ),
 		'checkout-update' => array( 'checkout/update'),
+        'home' => array('basket/mini','catalog/filter','catalog/stage','catalog/lists'),
 	),
 
 	'resource' => array(

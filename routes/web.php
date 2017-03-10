@@ -11,12 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('vendor/shop/home');
-})->name('home');
-
-
 Auth::routes();
 
+Route::get('/', 'HomeController@home')->name('home');
 
 Route::get('/logout', 'Auth\LoginController@logout');
