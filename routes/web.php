@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('app');
+    return view('vendor/shop/home');
 })->name('home');
 
 

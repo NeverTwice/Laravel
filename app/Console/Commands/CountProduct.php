@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Product;$
+use App\Product;
 use Illuminate\Console\Command;
 
 class CountProduct extends Command
